@@ -44,3 +44,9 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+00_getting_started/javascript-getting-started-exercises/javascript-getting-started-exercises/WebContent/WEB-INF/
+00_getting_started/javascript-getting-started-exercises/javascript-getting-started-exercises/build/
+00_getting_started/javascript-getting-started-exercises/javascript-getting-started-exercises/src/
+01_basic_syntax_1/javascript-basic-syntax-1-exercises/javascript-basic-syntax-1-exercises/WebContent/WEB-INF/
+01_basic_syntax_1/javascript-basic-syntax-1-exercises/javascript-basic-syntax-1-exercises/build/
+01_basic_syntax_1/javascript-basic-syntax-1-exercises/javascript-basic-syntax-1-exercises/src/
