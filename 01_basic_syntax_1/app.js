@@ -96,11 +96,9 @@ function padChars(i, string) {
  */
 function numRollsToGetSix() {
 	var numRolls = 1;
-	var numb_this_time = Math.random();
 
-	while (numb_this_time < (5/6)) {
+	while (Math.random() < (5/6)) {
 		numRolls++;
-		numb_this_time = Math.random();
 	}
 
 	return numRolls;
