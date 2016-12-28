@@ -50,17 +50,13 @@ var findLongerString = function (prev, curr) {
  * @param text
  * @returns {boolean}
  */
-var longestToken = function (text) {
-	var pattern = /[a|b]/g;
-	var matches = text.split(pattern);
-	var longestToken;
+var findLongestToken = function (text) {
+	var pattern = /([^a|^b]+)/g;
+	var matches = text.match(pattern);
+	var longestToken = "Cannot find the token which contains neither an 'a' nor a 'b'.";
 
-	var filtered = matches.filter(filterEmptyString);
-
-	if (filtered.length !== 0) {
-		longestToken = filtered.reduce(findLongerString);
-	} else {
-		longestToken = "Cannot find the token which contains neither an 'a' nor a 'b'.";
+	if (matches !== null) {
+		longestToken = matches.reduce(findLongerString);
 	}
 
 	console.log("The input value was: " + text);
@@ -69,7 +65,21 @@ var longestToken = function (text) {
 	return false;
 };
 
-longestToken("ababcdababefgababhiab");
-longestToken("aba");
+// findLongestToken("ababcdababefgababhiab");
+// findLongestToken("abab");
 
+/***
+ * 5. Write a function that, given an array of strings,
+ * will compute the sum of the lengths of the words
+ * that do not contain a "q".
+ * Do not use a loop or the forEach method, only array methods (filter, map, reduce)
+ * and string methods/properties (indexOf, length).
+ */
+var lengthOfNonQWords = function () {
 
+};
+
+var test1 = ["stop", "quit", "exit"];
+lengthOfNonQWords(test1);
+var test2 = ["queen", "quit"];
+lengthOfNonQWords(test2);
