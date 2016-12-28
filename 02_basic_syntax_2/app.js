@@ -75,11 +75,37 @@ var findLongestToken = function (text) {
  * Do not use a loop or the forEach method, only array methods (filter, map, reduce)
  * and string methods/properties (indexOf, length).
  */
-var lengthOfNonQWords = function () {
-
+var makeStrToLowerCase = function (element, index, array) {
+	array[index] = element.toLowerCase();
 };
 
-var test1 = ["stop", "quit", "exit"];
-lengthOfNonQWords(test1);
+var calculateLength= function (strArray) {
+	var sumOfLength = 0;
+
+	strArray.reduce(function (prev, curr) {
+		if (curr.indexOf("q") !== "-1") {
+			sumOfLength += curr.length;
+		} else {
+			//TODO: the result value of test2 is 4. Why?
+			sumOfLength;
+		}
+	});
+
+	return sumOfLength;
+};
+
+var lengthOfNonQWords = function (strArray) {
+	var resultValue;
+
+	strArray.map(makeStrToLowerCase);
+	resultValue = calculateLength(strArray);
+
+	console.log("The sum of the lengths of the words without a 'q' is: " + resultValue);
+
+	return false;
+};
+
+// var test1 = ["STOP", "Quit", "exit"];
+// lengthOfNonQWords(test1);
 var test2 = ["queen", "quit"];
 lengthOfNonQWords(test2);
