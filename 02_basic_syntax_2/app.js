@@ -36,6 +36,12 @@ strings.forEach(function(element, index, array) {
 
 //console.log(strings.valueOf());
 
+/***
+ * 4. Write a function that, given a string, will return the longest token
+ * that contains neither an 'a' nor a 'b'.
+ * @param text
+ * @returns {boolean}
+ */
 var filterEmptyString = function (string) {
 	return (string !== "");
 };
@@ -44,12 +50,6 @@ var findLongerString = function (prev, curr) {
 	return (prev.length > curr.length ? prev : curr);
 };
 
-/***
- * 4. Write a function that, given a string, will return the longest token
- * that contains neither an 'a' nor a 'b'.
- * @param text
- * @returns {boolean}
- */
 var findLongestToken = function (text) {
 	var pattern = /([^a|^b]+)/g;
 	var matches = text.match(pattern);
@@ -83,29 +83,22 @@ var calculateLength= function (strArray) {
 	var sumOfLength = 0;
 
 	strArray.reduce(function (prev, curr) {
-		if (curr.indexOf("q") !== "-1") {
+		if (curr.indexOf("q") == "-1") {
 			sumOfLength += curr.length;
-		} else {
-			//TODO: the result value of test2 is 4. Why?
-			sumOfLength;
 		}
-	});
+	}, 0);
 
 	return sumOfLength;
 };
 
 var lengthOfNonQWords = function (strArray) {
-	var resultValue;
-
 	strArray.map(makeStrToLowerCase);
-	resultValue = calculateLength(strArray);
-
-	console.log("The sum of the lengths of the words without a 'q' is: " + resultValue);
+	console.log("The sum of the lengths of the words without a 'q' is: " + calculateLength(strArray));
 
 	return false;
 };
 
-// var test1 = ["STOP", "Quit", "exit"];
-// lengthOfNonQWords(test1);
+var test1 = ["STOP", "Quit", "exit"];
+lengthOfNonQWords(test1);
 var test2 = ["queen", "quit"];
 lengthOfNonQWords(test2);

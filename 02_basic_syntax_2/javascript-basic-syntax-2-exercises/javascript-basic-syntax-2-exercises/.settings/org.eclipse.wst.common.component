@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="javascript-basic-syntax-2-exercises">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="javascript-basic-syntax-2-exercises"/>
+        <property name="java-output-path" value="/javascript-basic-syntax-2-exercises/build/classes"/>
+    </wb-module>
+</project-modules>
